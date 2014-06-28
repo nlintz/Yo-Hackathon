@@ -1,7 +1,7 @@
 var Yo = require('yoapi');
 var spawn = require('child_process').spawn;
 var tessel = require('tessel');
-var cmd = spawn('/usr/local/bin/tessel', ['run', './tessel_code/ambient-trigger.js'], {stdio:'pipe'});
+var cmd = spawn('/usr/local/bin/tessel', ['run', './tessel_code/ambient-trigger.js', '-u', '.'], {stdio:'pipe'});
 
 console.log("Yo Neighborhood. Keeping You Safe");
 
