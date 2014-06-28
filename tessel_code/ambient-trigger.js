@@ -22,4 +22,8 @@ ambientTrigger(function (data) {
   console.log("Warning! Activity Detected. Level:", data)
 })
 
+tessel.button.on('press',function(time){
+  console.log('triggers');
+});
+
 module.exports = ambientTrigger;
