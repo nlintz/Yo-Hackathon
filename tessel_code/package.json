@@ -18,5 +18,6 @@
   "homepage": "https://github.com/nlintz/Yo-Hackathon",
   "dependencies": {
     "ambient-attx4": "^0.1.4",
+    "camera-vc0706": "^0.1.6"
   }
 }
