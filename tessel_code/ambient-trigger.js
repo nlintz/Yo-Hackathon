@@ -1,15 +1,13 @@
 var tessel = require('tessel');
 var ambientlib = require('ambient-attx4');// Replace '../' with 'ambient-attx4' in your own code
-console.log('running')
 var ambient = ambientlib.use(tessel.port['A']);
 
 function ambientTrigger (callback) {
   ambient.on('ready', function () {
-    console.log('Sound Trigger Activated:')
     ambient.setSoundTrigger(0.1);
 
     ambient.on('sound-trigger', function(data) {
-      callback();
+      callback(data);
       ambient.clearSoundTrigger();
 
       setTimeout(function () {
@@ -20,8 +18,8 @@ function ambientTrigger (callback) {
 }
 
 // EXAMPLE CODE
-ambientTrigger(function () {
-  console.log('triggers')
+ambientTrigger(function (data) {
+  console.log(data)
 })
 
 module.exports = ambientTrigger;
