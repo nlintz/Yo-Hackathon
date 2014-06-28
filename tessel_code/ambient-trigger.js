@@ -6,7 +6,7 @@ var notificationLED = tessel.led[3]; // Set up an LED to notify when we're takin
 
 camera.on('ready', function () {
   cameraReady = true;
-})
+});
 
 function ambientTrigger (callback) {
 
@@ -19,7 +19,7 @@ function ambientTrigger (callback) {
       });
 
       setTimeout(function () {
-          ambient.setSoundTrigger(0.1);
+          ambient.setSoundTrigger(0.15);
       }, 1500);
     });
   });
