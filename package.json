@@ -1,0 +1,26 @@
+{
+  "name": "YO_Hackathon",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ambient-attx4": "^0.1.4",
+    "tessel": "^0.3.6",
+    "yoapi": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nlintz/Yo-Hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nlintz/Yo-Hackathon/issues"
+  },
+  "homepage": "https://github.com/nlintz/Yo-Hackathon"
+}
