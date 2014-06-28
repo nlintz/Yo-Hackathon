@@ -23,7 +23,7 @@ ambientTrigger(function (data) {
 })
 
 tessel.button.on('press',function(time){
-  console.log('triggers');
+  console.log('Send Help!');
 });
 
 module.exports = ambientTrigger;
