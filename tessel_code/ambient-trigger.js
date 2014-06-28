@@ -9,17 +9,14 @@ camera.on('ready', function () {
 })
 
 function ambientTrigger (callback) {
-  ambient.on('ready', function (err) {
 
+  ambient.on('ready', function () {
     ambient.setSoundTrigger(0.1);
 
     ambient.on('sound-trigger', function(data) {
-      console.log(data, callback)
-      if (data != undefined) {
-        callback(data)
-      };
-      
-      ambient.clearSoundTrigger();
+      ambient.clearSoundTrigger(function () {
+        callback(data);
+      });
 
       setTimeout(function () {
           ambient.setSoundTrigger(0.1);
@@ -44,7 +41,7 @@ ambientTrigger(function (data) {
         // Save the image
         process.sendfile(name, image);
         // Turn the camera off to end the script
-        // camera.disable();
+        camera.disable();
         notificationLED.low();
       }
     })
