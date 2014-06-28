@@ -24,4 +24,8 @@ ambientTrigger(function () {
   console.log('triggers')
 })
 
+tessel.button.on('press',function(time){
+  console.log('triggers');
+});
+
 module.exports = ambientTrigger;
