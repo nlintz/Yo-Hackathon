@@ -15,7 +15,11 @@ function ambientTrigger (callback) {
 
     ambient.on('sound-trigger', function(data) {
       ambient.clearSoundTrigger(function () {
-        callback(data);
+        if (data > .12) {
+          callback("HIGH");
+        } else {
+          callback("LOW")
+        }
       });
 
       setTimeout(function () {
@@ -27,7 +31,7 @@ function ambientTrigger (callback) {
 
 // EXAMPLE CODE
 ambientTrigger(function (data) {
-  console.log("Warning! Activity Detected. Level:", data)
+  console.log("Warning! Activity Detected - Danger Level:", data)
   if (cameraReady) 
   {
     camera.takePicture(function(err, image) {
