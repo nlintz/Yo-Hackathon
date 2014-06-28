@@ -19,7 +19,7 @@ function ambientTrigger (callback) {
 
 // EXAMPLE CODE
 ambientTrigger(function (data) {
-  console.log(data)
+  console.log("Warning! Activity Detected. Level:", data)
 })
 
 module.exports = ambientTrigger;
