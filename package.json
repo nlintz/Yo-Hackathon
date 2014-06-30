@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "ambient-attx4": "^0.1.4",
     "tessel": "^0.3.6",
     "yoapi": "0.0.2"
   },
