@@ -34,19 +34,6 @@ ambientTrigger(function (data) {
   if (cameraReady) 
   {
     camera.takePicture(function(err, image) {
-      notificationLED.high();
-      if (err) {
-        console.log('error taking image', err);
-      } else {
-        notificationLED.low();
-        // Name the image
-        var name = 'picture-' + Math.floor(Date.now()*1000) + '.jpg';
-        // Save the image
-        process.sendfile(name, image);
-        // Turn the camera off to end the script
-        // camera.disable();
-        notificationLED.low();
-      }
     })
   }
 
